@@ -1,0 +1,168 @@
+/*Gerais*/
+
+:root{
+    --vermelho:     #9e0000;
+    --preto:        #1d1d1d;
+    --branco:       #fff;
+    --cinza-claro:  #e7e7e7;
+    --cinza:        #c4c4c4;
+    --cinza-escuro: #777777;
+    background-color: var(--cinza-claro);
+    font-family: 'Roboto Serif', serif;
+    font-size: 16px;
+}
+
+img{
+    max-width: 100%;
+}
+
+.paragrafo{
+    line-height: 1.3;
+    margin-bottom: 1.6rem;
+}
+
+strong{
+    font-weight: 600;
+}
+
+.subtitulo{
+    font-weight: bold;
+    font-style: italic;
+    text-align: left;
+    font-size: 2rem;
+    margin-bottom: 1.6rem;
+}
+
+.subtitulo__descritivo{
+    font-weight: bold;
+    font-style: italic;
+    text-align: left;
+    font-size: 1.8rem;
+    margin: 1rem 0;
+}
+
+.link{
+    color: var(--vermelho);
+    text-decoration: none;
+}
+
+/*Header*/
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    padding: 2rem;
+    max-height: 100vh; min-height: 100vh;
+
+}
+.minibio__titulo{
+    font-weight: bolder;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+.minibio__foto{
+    border-radius: 100%;
+    max-height: 25vh;
+    margin: auto;
+    display: block;
+}
+
+.minibio__texto{
+    text-align: center;
+}
+
+.minibio__texto::before{
+    content: "";
+    display: block;
+    height: 2px;
+    width: 60vw;
+    margin: 2rem auto;
+    max-width: 100%;
+    background-color: var(--cinza-escuro);
+}
+
+.menu__social{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.menu__social__link{
+    margin: 1rem;
+    padding: .5rem;
+    border-radius: 100%;
+    color: var(--vermelho);
+    transition: background-color ease .5s;
+}
+
+.menu__social__link:hover{
+    background-color: var(--branco);
+}
+
+.menu__lista__item{
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: 1px solid var(--cinza-escuro);
+}
+
+.menu__lista__link, .link{
+    text-decoration: none;
+    color: var(--vermelho);
+    transition: color ease .25s, background-color ease .5s;
+}
+
+.menu__lista__link:hover, .link:hover{
+    color: var(--cinza-claro);
+    background-color: var(--vermelho);
+}
+
+.conteudo{
+    margin: 2rem 2rem 0;
+}
+
+.lista_formacoes__titulo{
+    font-weight: 600;
+    margin-top: .7rem;
+}
+
+.lista_formacoes__instituicao{
+
+}
+
+.lista_formacoes__dados{
+    margin: .5rem;
+}
+
+.lista_formacoes__status , .lista_formacoes__periodo{
+    font-style: italic;
+}
+
+.lista_formacoes__periodo{
+    color: var(--cinza-escuro);
+}
+
+.portfolio{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (min-width: 728px){
+    .corpo{
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        max-width: 80vw;
+        margin: auto;
+    }
+
+    .header{
+        justify-content: space-around;
+        max-width: 20vw;
+        position: sticky;
+        top: 0;
+        padding-top: 0;
+    }
+}
